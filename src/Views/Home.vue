@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1>Lista de Tareas</h1>
+    <h1 class="text-3xl font-bold text-center mb-6">Lista de Tareas</h1>
     <TaskList />
   </v-container>
 </template>
@@ -16,10 +16,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped>
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-</style>

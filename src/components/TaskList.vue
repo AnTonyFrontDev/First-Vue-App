@@ -1,14 +1,17 @@
 <template>
-  <v-container>
+  <v-container class="max-w-xl mx-auto pt-12">
     <v-text-field
         v-model="newTask"
         label="Nueva Tarea"
         @keyup.enter="addTask"
         outlined
+        class="mb-4"
     ></v-text-field>
-    <v-btn @click="addTask" color="primary" class="my-4">Añadir</v-btn>
+    <v-btn @click="addTask" color="primary" class="mb-6">
+      Añadir
+    </v-btn>
 
-    <v-list>
+    <v-list class="task-grid">
       <TaskItem
           v-for="task in tasks"
           :key="task.id"
@@ -53,9 +56,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
-v-container {
-  max-width: 600px;
-  margin: auto;
-  padding-top: 50px;
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 </style>
