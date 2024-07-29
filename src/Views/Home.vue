@@ -1,13 +1,18 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <div>
-    <h3>Task Item</h3>
-  </div>
+  <v-container>
+    <h1>Lista de Tareas</h1>
+    <TaskList />
+  </v-container>
 </template>
 
-<style scoped>
+<script lang="ts">
+import { defineComponent } from 'vue';
+import TaskList from '/src/components/TaskList.vue';
 
-</style>
+export default defineComponent({
+  name: 'Home',
+  components: {
+    TaskList
+  }
+});
+</script>
