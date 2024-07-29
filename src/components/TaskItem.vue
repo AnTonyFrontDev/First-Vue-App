@@ -23,7 +23,8 @@ export default defineComponent({
 });
 </script>
 
-
 <style scoped>
-
+.v-list-item {
+  margin: 10px 0;
+}
 </style>

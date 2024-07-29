@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <v-container>
     <v-text-field
         v-model="newTask"
         label="Nueva Tarea"
         @keyup.enter="addTask"
+        outlined
     ></v-text-field>
-    <v-btn @click="addTask">Añadir</v-btn>
+    <v-btn @click="addTask" color="primary" class="my-4">Añadir</v-btn>
 
     <v-list>
       <TaskItem
@@ -15,7 +16,7 @@
           @remove="removeTask"
       />
     </v-list>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -51,7 +52,10 @@ export default defineComponent({
 });
 </script>
 
-
 <style scoped>
-
+v-container {
+  max-width: 600px;
+  margin: auto;
+  padding-top: 50px;
+}
 </style>
