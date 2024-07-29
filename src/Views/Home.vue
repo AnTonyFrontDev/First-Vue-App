@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TaskList from '/src/components/TaskList.vue';
+import TaskList from '../components/TaskList.vue';
 
 export default defineComponent({
   name: 'Home',
@@ -16,3 +16,10 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+</style>
